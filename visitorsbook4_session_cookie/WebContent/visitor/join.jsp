@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="/include/header.jsp" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +34,7 @@
                     alert("비밀번호 확인!!!");
                     return;
                 } else {
-                    $("#memberform").attr("action", "/visitorsbook4_session_cookie/").submit();
+                    $("#memberform").attr("action", "<%= root %>/visitor").submit();
                 }
             });
 
