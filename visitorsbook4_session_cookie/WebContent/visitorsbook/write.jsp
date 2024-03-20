@@ -15,7 +15,7 @@ location.href = "<%= root %>/visitor/login.jsp";
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>SSAFY - 글작성</title>
+    <title>Visitor's Book - 글 작성</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -68,7 +68,7 @@ location.href = "<%= root %>/visitor/login.jsp";
                     <textarea class="form-control" rows="15" id="content" name="content"></textarea>
                 </div>
                 <div class="text-center">
-                    <button type="button" id="registerBtn" class="btn btn-outline-primary">글작성</button>
+                    <button type="button" id="registerBtn" class="btn btn-outline-primary">글 작성</button>
                     <button type="reset" class="btn btn-outline-danger">초기화</button>
                 </div>
             </form>

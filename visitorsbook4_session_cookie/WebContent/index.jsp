@@ -5,11 +5,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Visitor</title>
+	<title>Visitor's Book</title>
 </head>
 <body>
 	<div align="center">
-		<h3>Visitors' Book with Session and Cookie!!!</h3>
+		<h3>Atimaby visitor's Book with Session and Cookie!!!</h3>
 		<%
 		if(visitorDto == null) {
 		%>
