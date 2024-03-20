@@ -5,11 +5,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Visitor</title>
+	<title>Visitor's Book</title>
 </head>
 <body>
 	<div align="center">
-		<h3>Visitors' Book with EL and JSTL!!!</h3>
+		<h3>Atimaby visitor's Book with EL and JSTL!!!</h3>
 		<c:if test="${empty visitorinfo}">
 			<a href="${root}/visitor/join.jsp">회원가입</a><br> 
 			<a href="${root}/visitor/login.jsp">로그인</a><br> 

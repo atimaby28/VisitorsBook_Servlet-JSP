@@ -76,9 +76,9 @@ public class VisitorServlet extends HttpServlet {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder loginVisitor = new StringBuilder();
-			loginVisitor.append("select count(visitorid) \n");
-			loginVisitor.append("from visitors \n");
-			loginVisitor.append("where visitorid = ?");
+			loginVisitor.append("SELECT COUNT(visitorid) \n");
+			loginVisitor.append("FROM visitors \n");
+			loginVisitor.append("WHERE visitorid = ?");
 			pstmt = conn.prepareStatement(loginVisitor.toString());
 			pstmt.setString(1, ckid);
 			rs = pstmt.executeQuery();
@@ -111,8 +111,8 @@ public class VisitorServlet extends HttpServlet {
 
 		try {
 			conn = dbUtil.getConnection();
-			String sql = "insert into visitors (visitorid, visitorname, visitorpwd, email, joindate) \n";
-			sql += "values (?, ?, ?, ?, now())";
+			String sql = "INSERT INTO visitors (visitorid, visitorname, visitorpwd, email, joindate) \n";
+			sql += "VALUES (?, ?, ?, ?, now())";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, name);
@@ -142,9 +142,9 @@ public class VisitorServlet extends HttpServlet {
 
 		try {
 			conn = dbUtil.getConnection();
-			String sql = "select visitorid, visitorname, email \n";
-			sql += "from visitors \n";
-			sql += "where visitorid = ? and visitorpwd = ?";
+			String sql = "SELECT visitorid, visitorname, email \n";
+			sql += "FROM visitors \n";
+			sql += "WHERE visitorid = ? AND visitorpwd = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pass);
