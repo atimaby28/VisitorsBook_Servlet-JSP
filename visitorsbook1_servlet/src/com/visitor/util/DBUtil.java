@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class DBUtil {
 
 	private final String driverName = "com.mysql.cj.jdbc.Driver";
-	private final String url = "jdbc:mysql://127.0.0.1:3306/visitorweb?serverTimezone=UTC";
+	private final String url = "jdbc:mysql://127.0.0.1:3306/visitorsbook?serverTimezone=UTC";
 	private final String user = "visitor";
-	private final String password = "1234";
+	private final String password = "12345678";
 
 	private static DBUtil instance = new DBUtil();
 

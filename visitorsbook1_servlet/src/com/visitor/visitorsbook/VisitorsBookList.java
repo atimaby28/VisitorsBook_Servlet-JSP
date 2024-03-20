@@ -61,21 +61,21 @@ public class VisitorsBookList extends HttpServlet {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder listArticle = new StringBuilder();
-			listArticle.append("select articleno, visitorid, subject, content, regtime \n");
-			listArticle.append("from visitorsbook \n");
-			listArticle.append("order by articleno desc \n");
+			listArticle.append("SELECT articleno, visitorid, subject, content, regtime \n");
+			listArticle.append("FROM visitorsbook \n");
+			listArticle.append("ORDER BY articleno DESC \n");
 			pstmt = conn.prepareStatement(listArticle.toString());
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				out.println("            <table class=\"table table-active text-left\">");
 				out.println("                <tbody>");
 				out.println("                    <tr class=\"table-info\">");
-				out.println("                        <td>작성자 : visitor</td>");
-				out.println("                        <td class=\"text-right\">작성일 : 2025-02-28 16:30:12</td>");
+				out.println("                        <td>작성자 : atimaby28</td>");
+				out.println("                        <td class=\"text-right\">작성일 : 2024-02-28 16:30:12</td>");
 				out.println("                    </tr>");
 				out.println("                    <tr>");
 				out.println("                        <td colspan=\"2\" class=\"table-danger\">");
-				out.println("                            <strong>10. 안녕하세요!!!</strong>");
+				out.println("                            <strong>1. 안녕하세요!!!</strong>");
 				out.println("                        </td>");
 				out.println("                    </tr>");
 				out.println("                    <tr>");

@@ -26,7 +26,7 @@ public class VisitorsBookWrite extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		1. data get
 		request.setCharacterEncoding("utf-8"); // post에서만 !
-		String id = request.getParameter("visitorid");
+		String visitorid = request.getParameter("visitorid");
 		String subject = request.getParameter("subject");
 		String content = request.getParameter("content");
 		System.out.println(subject);
@@ -38,10 +38,10 @@ public class VisitorsBookWrite extends HttpServlet {
 		
 		try {
 			conn = util.getConnection();
-			String sql = "insert into visitorsbook (visitorid, subject, content) \n";
-			sql += "values (?, ?, ?)";
+			String sql = "INSERT INTO visitorsbook (visitorid, subject, content) \n";
+			sql += "VALUES (?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setString(1, visitorid);
 			pstmt.setString(2, subject);
 			pstmt.setString(3, content);
 			cnt = pstmt.executeUpdate();
