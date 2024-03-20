@@ -7,7 +7,7 @@ List<VisitorsBookDto> list = (List<VisitorsBookDto>) request.getAttribute("artic
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>SSAFY - 글목록</title>
+    <title>Visitor's Book - 글 목록</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>

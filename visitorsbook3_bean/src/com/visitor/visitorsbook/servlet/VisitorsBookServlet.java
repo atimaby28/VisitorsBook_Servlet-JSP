@@ -70,8 +70,8 @@ public class VisitorsBookServlet extends HttpServlet {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder registerArticle = new StringBuilder();
-			registerArticle.append("insert into visitorsbook (visitorid, subject, content, regtime) \n");
-			registerArticle.append("values (?, ?, ?, now())");
+			registerArticle.append("INSERT INTO visitorsbook (visitorid, subject, content, regtime) \n");
+			registerArticle.append("VALUES (?, ?, ?, now())");
 			pstmt = conn.prepareStatement(registerArticle.toString());
 			pstmt.setString(1, visitorid);
 			pstmt.setString(2, subject);
@@ -93,9 +93,9 @@ public class VisitorsBookServlet extends HttpServlet {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder listArticle = new StringBuilder();
-			listArticle.append("select articleno, visitorid, subject, content, regtime \n");
-			listArticle.append("from visitorsbook \n");
-			listArticle.append("order by articleno desc \n");
+			listArticle.append("SELECT articleno, visitorid, subject, content, regtime \n");
+			listArticle.append("FROM visitorsbook \n");
+			listArticle.append("ORDER BY articleno DESC \n");
 			pstmt = conn.prepareStatement(listArticle.toString());
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
