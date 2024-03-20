@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Visitor - 글목록</title>
+    <title>Visitor's Book - 글목록</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -38,9 +38,9 @@
     		try {
     			conn = util.getConnection();
     			StringBuilder listArticle = new StringBuilder();
-    			listArticle.append("select articleno, visitorid, subject, content, regtime \n");
-    			listArticle.append("from visitorsbook \n");
-    			listArticle.append("order by articleno desc \n");
+    			listArticle.append("SELECT articleno, visitorid, subject, content, regtime \n");
+    			listArticle.append("FROM visitorsbook \n");
+    			listArticle.append("ORDER BY articleno DESC \n");
     			pstmt = conn.prepareStatement(listArticle.toString());
     			rs = pstmt.executeQuery();
     			while(rs.next()) {

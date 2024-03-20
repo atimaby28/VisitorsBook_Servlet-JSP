@@ -4,7 +4,7 @@
 <%
 //1. data get
 request.setCharacterEncoding("utf-8"); // 받는 인코딩 처리, post에서만 !
-String id = request.getParameter("visitorid");
+String visitorid = request.getParameter("visitorid");
 String subject = request.getParameter("subject");
 String content = request.getParameter("content");
 System.out.println(subject);
@@ -16,10 +16,10 @@ int cnt = 0;
 
 try {
 	conn = util.getConnection();
-	String sql = "insert into visitorsbook (visitorid, subject, content) \n";
-	sql += "values (?, ?, ?)";
+	String sql = "INSERT INTO visitorsbook (visitorid, subject, content) \n";
+	sql += "VALUES (?, ?, ?)";
 	pstmt = conn.prepareStatement(sql);
-	pstmt.setString(1, id);
+	pstmt.setString(1, visitorid);
 	pstmt.setString(2, subject);
 	pstmt.setString(3, content);
 	cnt = pstmt.executeUpdate();
@@ -34,7 +34,7 @@ try {
 
 <head>
     <meta charset="UTF-8">
-    <title>Visitor - 글목록</title>
+    <title>Visitor's Book - 글목록</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
