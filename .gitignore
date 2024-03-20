@@ -26,3 +26,18 @@ hs_err_pid*
 # metadata
 .metadata
 /.recommenders/
+
+# idea
+.idea/
+
+# DS_Store
+.DS_Store
+
+# Tomcat Server
+Servers/
+
+# Project
+.project
+
+# Classpath
+.classpath
