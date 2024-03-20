@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <title>SSAFY-글수정</title>
+    <title>Visitor's Book - 글 수정</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -55,7 +55,7 @@
 				<label for="content">내용:</label>
 				<textarea class="form-control" rows="15" id="content" name="content">${article.content}</textarea>
 			</div>
-			<button type="button" class="btn btn-primary" onclick="javascript:writeArticle();">글수정</button>
+			<button type="button" class="btn btn-primary" onclick="javascript:writeArticle();">글 수정</button>
 			<button type="button" class="btn btn-warning" onclick="javascript:cancelModify();">취소</button>
 		</form>
 	</div>

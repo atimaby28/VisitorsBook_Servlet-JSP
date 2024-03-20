@@ -3,7 +3,7 @@
 <%@ include file="/include/header.jsp" %>
 
 	<div align="center">
-		<h3>Visitors' Book with MVC!!!</h3>
+		<h3>Atimaby visitor's Book with MVC!!!</h3>
 		<c:if test="${empty visitorinfo}">
 			<a href="${root}/visitor?act=mvregister">회원가입</a><br> 
 			<a href="${root}/visitor?act=mvlogin">로그인</a><br> 

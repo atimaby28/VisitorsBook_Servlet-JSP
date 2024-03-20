@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 public class DBUtil {
 
 //	private final String driverName = "com.mysql.cj.jdbc.Driver";
-//	private final String url = "jdbc:mysql://127.0.0.1:3306/visitorweb?serverTimezone=UTC";
+//	private final String url = "jdbc:mysql://127.0.0.1:3306/visitorsbook?serverTimezone=UTC";
 //	private final String user = "visitor";
 //	private final String password = "1234";
 

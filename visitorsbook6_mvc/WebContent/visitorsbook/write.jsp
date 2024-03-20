@@ -56,7 +56,7 @@
 	                    <textarea class="form-control" rows="15" id="content" name="content"></textarea>
 	                </div>
 	                <div class="text-center">
-	                    <button type="button" id="registerBtn" class="btn btn-outline-primary">글작성</button>
+	                    <button type="button" id="registerBtn" class="btn btn-outline-primary">글 작성</button>
 	                    <button type="reset" class="btn btn-outline-danger">초기화</button>
 	                </div>
 	            </form>

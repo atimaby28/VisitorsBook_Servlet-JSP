@@ -79,8 +79,8 @@
                     <input type="password" class="form-control" id="visitorpwd" name="visitorpwd" placeholder="비밀번호입력...">
                 </div>
                 <div class="form-group">
-                    <label for="pwdcheck">비밀번호재입력</label>
-                    <input type="password" class="form-control" id="pwdcheck" name="pwdcheck" placeholder="비밀번호재입력...">
+                    <label for="pwdcheck">비밀번호 재입력</label>
+                    <input type="password" class="form-control" id="pwdcheck" name="pwdcheck" placeholder="비밀번호 재입력...">
                 </div>
                 <div class="form-group">
                     <label for="emailid">이메일</label><br>

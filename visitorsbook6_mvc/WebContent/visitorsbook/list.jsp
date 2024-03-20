@@ -19,9 +19,9 @@
 
     <div class="container text-center mt-3">
         <div class="col-lg-8 mx-auto">
-            <h2 class="p-3 mb-3 shadow bg-light"><mark class="sky">글목록</mark></h2>
+            <h2 class="p-3 mb-3 shadow bg-light"><mark class="sky">글 목록</mark></h2>
             <div class="m-3 text-right">
-                <button type="button" id="mvRegisterBtn" class="btn btn-link">글작성</button>
+                <button type="button" id="mvRegisterBtn" class="btn btn-link">글 작성</button>
             </div>
             <div class="m-3 text-right">
                 <form action="${root}/visitorsbook">

@@ -32,8 +32,8 @@ public class VisitorsBookDaoImpl implements VisitorsBookDao {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder registerArticle = new StringBuilder();
-			registerArticle.append("insert into visitorsbook (visitorid, subject, content, regtime) \n");
-			registerArticle.append("values (?, ?, ?, now())");
+			registerArticle.append("INSERT INTO visitorsbook (visitorid, subject, content, regtime) \n");
+			registerArticle.append("VALUES (?, ?, ?, now())");
 			pstmt = conn.prepareStatement(registerArticle.toString());
 //			pstmt.setString(1, visitorid);
 			pstmt.setString(1, visitorsBookDto.getVisitorId());
@@ -55,16 +55,16 @@ public class VisitorsBookDaoImpl implements VisitorsBookDao {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder listArticle = new StringBuilder();
-			listArticle.append("select b.articleno, b.visitorid, b.subject, b.content, b.regtime, v.visitorname \n");
-			listArticle.append("from visitorsbook b, visitors v \n");
-			listArticle.append("where b.visitorid = v.visitorid \n");
+			listArticle.append("SELECT b.articleno, b.visitorid, b.subject, b.content, b.regtime, v.visitorname \n");
+			listArticle.append("FROM visitorsbook b, visitors v \n");
+			listArticle.append("WHERE b.visitorid = v.visitorid \n");
 			if(!word.isEmpty()) {
 				if(key.equals("visitorid"))
-					listArticle.append("and b.visitorid = ? \n");
+					listArticle.append("AND b.visitorid = ? \n");
 				else if(key.equals("subject"))
-					listArticle.append("and b.subject like ? \n");
+					listArticle.append("AND b.subject like ? \n");
 			}
-			listArticle.append("order by b.articleno desc \n");
+			listArticle.append("ORDER BY b.articleno desc \n");
 			pstmt = conn.prepareStatement(listArticle.toString());
 			if(key.equals("visitorid"))
 				pstmt.setString(1, word);
@@ -100,9 +100,9 @@ public class VisitorsBookDaoImpl implements VisitorsBookDao {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder registerArticle = new StringBuilder();
-			registerArticle.append("select articleno, visitorid, subject, content, regtime \n ");
-			registerArticle.append("from visitorsbook \n");
-			registerArticle.append("where articleno=?");
+			registerArticle.append("SELECT articleno, visitorid, subject, content, regtime \n ");
+			registerArticle.append("FROM visitorsbook \n");
+			registerArticle.append("WHERE articleno=?");
 			pstmt = conn.prepareStatement(registerArticle.toString());
 			pstmt.setInt(1, articleNo);
 			rs=pstmt.executeQuery();
@@ -129,8 +129,8 @@ public class VisitorsBookDaoImpl implements VisitorsBookDao {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder registerArticle = new StringBuilder();
-			registerArticle.append("update visitorsbook set subject=?, content=? ");
-			registerArticle.append("where articleno=?");
+			registerArticle.append("UPDATE visitorsbook SET subject=?, content=? ");
+			registerArticle.append("WHERE articleno=?");
 			pstmt = conn.prepareStatement(registerArticle.toString());
 			pstmt.setString(1, visitorsBookDto.getSubject());
 			pstmt.setString(2, visitorsBookDto.getContent());
@@ -148,8 +148,8 @@ public class VisitorsBookDaoImpl implements VisitorsBookDao {
 		try {
 			conn = dbUtil.getConnection();
 			StringBuilder registerArticle = new StringBuilder();
-			registerArticle.append("delete from visitorsbook \n");
-			registerArticle.append("where articleno = ?");
+			registerArticle.append("DELETE FROM visitorsbook \n");
+			registerArticle.append("WHERE articleno = ?");
 			pstmt = conn.prepareStatement(registerArticle.toString());
 			pstmt.setInt(1, articleNo);
 			pstmt.executeUpdate();
