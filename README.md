@@ -4,6 +4,16 @@
 
  ## 🐝 Servelt과 JSP를 이용한 방명록 만들기
 
+ <br>
+
+ ### 프로젝트의 특징
+
+<br>
+
+스프링(Spring)을 공부하기 전 Servelt부터 시작하여 JSP, EL-JSTL 그리고 마지막으로 MVC Pattern까지 변화과정을 알아보며<br> 
+스프링의 탄생 배경을 이해합니다.
+ 
+
 <br>
 
 ### 환경설정
@@ -14,17 +24,10 @@
 
 <br>
 
-위의 그림과 같이 프로젝트 Property를 열어 JRE System Library로 설치한 JDK를, Server Runtime으로 Tomcat 9.0을 설정해 준다.
+위의 그림과 같이 프로젝트 Property를 열어 JRE System Library로 설치한 JDK를, Server Runtime으로 Tomcat 9.0을 설정해 줍니다.
 
 <br>
 
-### 프로젝트의 특징
-
-<br>
-
-스프링(Spring)을 공부하기 전 Servelt부터 시작하여 JSP, EL-JSTL 그리고 마지막으로 MVC Pattern까지 변화과정을 알아보며 스프링의 탄생 배경을 이해한다.
- 
-<br>
 
 ### 프로젝트 소개
 
